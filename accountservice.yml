@@ -10,8 +10,8 @@ spring:
 
   application:
     name: account-service
-  active:
-    profiles: dev
+  profile:
+    active: dev
 
   #jpa configurations
   jpa:
