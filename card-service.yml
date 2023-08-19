@@ -1,14 +1,21 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/microservices
-    username: root
-    password: 123456789
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+
   application:
-    name: card-service
+    name: account-service
+  profile:
+    active: dev
 
   #jpa configurations
   jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
     show-sql: true
     properties:
       hibernate:
@@ -16,7 +23,6 @@ spring:
         use_sql_comments: true
     hibernate:
       ddl-auto: update
-      dialect: org.hibernate.dialect.MySQL8Dialect
 
 server:
   port: 8082
