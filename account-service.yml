@@ -8,11 +8,6 @@ spring:
     console:
       enabled: true
 
-  application:
-    name: account-service
-  profile:
-    active: dev
-
   #jpa configurations
   jpa:
     spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
@@ -23,9 +18,6 @@ spring:
         use_sql_comments: true
     hibernate:
       ddl-auto: update
-
-server:
-  port: 8081
 
 management:
   endpoints:
